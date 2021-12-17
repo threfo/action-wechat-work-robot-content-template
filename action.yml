@@ -1,0 +1,11 @@
+name: 'action-wechat-work-robot-content-template'
+description: 'bello企业微信机器人消息模版'
+inputs:
+  context:
+    description: 'github action context `github`'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+
