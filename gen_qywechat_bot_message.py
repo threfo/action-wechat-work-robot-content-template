@@ -20,7 +20,7 @@ text_content_title = f'项目：{github.get("repository")}\n分支：{github.get
 
 # commits info
 nl = '\n'
-md_content_commits = '\n'.join([f'> <font color=info>[{item.get("id")[:6]}]({item.get("url")})</font>, **{item.get("committer", {}).get("name")}**：<font color=warning>{item.get("message").split(nl)[0]}</font>' for item in commits[:5]])
+md_content_commits = '\n'.join([f'> <font color=info>[{item.get("id")[:6]}]({item.get("url")})</font>, **{item.get("committer", {}).get("name")}**：<font color=warning>{item.get("message").split(nl)[0]}</font>' for item in commits[:-6:-1]])
 
 # build status
 md_content_build_status = f'### [查看构建状态]({action_status_url})'
